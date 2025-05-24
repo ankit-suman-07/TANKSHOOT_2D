@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbxwvvvjpb3ex"]
+
+[ext_resource type="Script" uid="uid://ddehss5fh3i0t" path="res://scripts/player_noz.gd" id="1_2cphu"]
+[ext_resource type="PackedScene" uid="uid://c00hxfovo3pb4" path="res://scenes/bullet.tscn" id="2_qwkil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx06f"]
+size = Vector2(48, 48)
+
+[node name="player_noz" type="CharacterBody2D"]
+script = ExtResource("1_2cphu")
+bullet_scene = ExtResource("2_qwkil")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vx06f")
+
+[node name="BulletSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(0, -64)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, -24, 0, -64)
+width = 4.0
