@@ -3,7 +3,7 @@ extends CharacterBody2D
 var score := 0
 var bullet := 10
 
-@export var speed := 800.0
+@export var speed := 100.0
 var direction := Vector2.ZERO
 var has_collided := false  # Flag to ensure we print only once
 
