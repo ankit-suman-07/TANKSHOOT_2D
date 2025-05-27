@@ -24,3 +24,5 @@ width = 4.0
 [node name="BulletSpawnPoint" type="Marker2D" parent="."]
 position = Vector2(0, -63)
 rotation = 0.000761576
+
+[node name="Camera2D" type="Camera2D" parent="."]

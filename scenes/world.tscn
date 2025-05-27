@@ -1,10 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://012vq7or7x8k"]
+[gd_scene load_steps=3 format=3 uid="uid://012vq7or7x8k"]
 
 [ext_resource type="PackedScene" uid="uid://cbxwvvvjpb3ex" path="res://scenes/player_noz.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://bjm8ywy04wb55" path="res://scenes/obstacle.tscn" id="2_rwgxs"]
 
 [node name="world" type="Node2D"]
 
 [node name="player_noz" parent="." instance=ExtResource("1_nnsk1")]
 position = Vector2(576, 288)
-speed = 200.0
-rotation_speed = 5.0
+
+[node name="obstacle" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(296, 184)
+
+[node name="obstacle2" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(760, 72)
+
+[node name="obstacle3" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(968, 408)
+
+[node name="obstacle4" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(456, 560)
+
+[node name="obstacle5" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(408, 816)
+
+[node name="obstacle6" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(848, 744)
+
+[node name="obstacle7" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(224, -216)
+
+[node name="obstacle8" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(672, -120)
+
+[node name="obstacle9" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(504, -392)
