@@ -6,3 +6,5 @@
 
 [node name="player_noz" parent="." instance=ExtResource("1_nnsk1")]
 position = Vector2(576, 288)
+speed = 200.0
+rotation_speed = 5.0

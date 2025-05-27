@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var score := 0
-var bullet := 10
+var bullet := 100
 
 @export var speed := 100.0
 var direction := Vector2.ZERO
