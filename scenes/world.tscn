@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://012vq7or7x8k"]
+[gd_scene load_steps=3 format=3 uid="uid://012vq7or7x8k"]
 
 [ext_resource type="PackedScene" uid="uid://cbxwvvvjpb3ex" path="res://scenes/player_noz.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://bjm8ywy04wb55" path="res://scenes/obstacle.tscn" id="2_rwgxs"]
-[ext_resource type="PackedScene" uid="uid://1xhs36ea82v6" path="res://scenes/boundary.tscn" id="3_4wyf3"]
 
 [node name="world" type="Node2D"]
 
@@ -35,47 +34,3 @@ position = Vector2(672, -120)
 
 [node name="obstacle9" parent="." instance=ExtResource("2_rwgxs")]
 position = Vector2(504, -392)
-
-[node name="boundary" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(-784, -4064)
-rotation = -0.389884
-
-[node name="boundary2" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(1568, -4608)
-rotation = -0.0234506
-
-[node name="boundary3" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(5024, -4256)
-rotation = 0.294052
-
-[node name="boundary4" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(7568, -2896)
-rotation = 1.26604
-
-[node name="boundary5" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(7464, -256)
-rotation = 2.34767
-
-[node name="boundary6" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(4832, 1912)
-rotation = 2.62063
-
-[node name="boundary7" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(1728, 3232)
-rotation = 2.97361
-
-[node name="boundary8" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(-1272, 3248)
-rotation = 3.56501
-
-[node name="boundary9" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(-3960, 1592)
-rotation = 3.97642
-
-[node name="boundary10" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(-5720, -784)
-rotation = 4.43922
-
-[node name="boundary11" parent="." instance=ExtResource("3_4wyf3")]
-position = Vector2(-4248, -3152)
-rotation = 6.14155
