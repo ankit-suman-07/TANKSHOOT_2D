@@ -1,13 +1,12 @@
 extends CharacterBody2D
 
 @export var speed := 1000.0
-@export var rotation_speed := 5.0  # Smooth rotation speed
-#@export var bullet_scene : PackedScene
+@export var rotation_speed := 5.0  # Unused now, optional to remove
 var bullet_scene: PackedScene = preload("res://scenes/bullet.tscn")
 
-var last_mouse_pos := Vector2.ZERO
-const MOUSE_MOVE_THRESHOLD := 2.0  # Minimum pixels moved to trigger rotation
-
+const ROTATION_SPEED := 150.0  # degrees per second
+const MIN_ROTATION := deg_to_rad(-60.0)
+const MAX_ROTATION := deg_to_rad(60.0)
 
 func _ready():
 	print("bullet_scene is:", bullet_scene)
@@ -15,35 +14,37 @@ func _ready():
 		print("🚨 bullet_scene is still null at runtime!")
 	else:
 		print("✅ bullet_scene loaded successfully!")
-	last_mouse_pos = get_global_mouse_position()
 
 func _physics_process(delta):
-	rotate_toward_mouse(delta)
+	handle_rotation(delta)
 	handle_movement(delta)
 
 	if Input.is_action_just_pressed("shoot"):
 		print("shoot")
 		shoot()
 
-func rotate_toward_mouse(delta):
-	var mouse_pos = get_global_mouse_position()
+func handle_rotation(delta):
+	var input = 0.0
+	if Input.is_action_pressed("left"):  # ← arrow
+		input -= 1.0
+	if Input.is_action_pressed("right"):  # → arrow
+		input += 1.0
 
-	if last_mouse_pos.distance_to(mouse_pos) > MOUSE_MOVE_THRESHOLD:
-		var angle_to_mouse = (mouse_pos - global_position).angle()
-		rotation = lerp_angle(rotation, angle_to_mouse, rotation_speed * delta)
-		last_mouse_pos = mouse_pos
+	if input != 0.0:
+		rotation += deg_to_rad(ROTATION_SPEED) * input * delta
+		#rotation = clamp(rotation, MIN_ROTATION, MAX_ROTATION)
 
 func handle_movement(delta):
 	var input_vector = Vector2.ZERO
-	
+
 	if Input.is_action_pressed("forward"):   # W
 		input_vector.y -= 1
 	if Input.is_action_pressed("back"):     # S
 		input_vector.y += 1
-	if Input.is_action_pressed("left"):     # A
-		input_vector.x -= 1
-	if Input.is_action_pressed("right"):    # D
-		input_vector.x += 1
+	#if Input.is_action_pressed("left"):     # A
+		#input_vector.x -= 1
+	#if Input.is_action_pressed("right"):    # D
+		#input_vector.x += 1
 
 	if input_vector != Vector2.ZERO:
 		input_vector = input_vector.normalized()
@@ -51,17 +52,12 @@ func handle_movement(delta):
 		velocity = rotated_vector * speed
 	else:
 		velocity = Vector2.ZERO
-	
+
 	move_and_slide()
 
 func shoot():
 	print("Shoot func")
-	print(bullet_scene)
 	if bullet_scene:
-		if bullet_scene == null:
-			print("Bullet scene not assigned!")
-		else:
-			print("Bullet is present")
 		var bullet = bullet_scene.instantiate()
 		var spawn_point = $BulletSpawnPoint.global_position
 		var direction = Vector2.UP.rotated(global_rotation)
