@@ -19,15 +19,14 @@ func _physics_process(delta):
 	handle_movement(delta)
 
 	if Input.is_action_just_pressed("shoot"):
-		print("shoot")
 		shoot()
 
 func handle_rotation(delta):
 	var input = 0.0
 	if Input.is_action_pressed("left"):  # ← arrow
-		input -= 1.0
+		input -= 0.5
 	if Input.is_action_pressed("right"):  # → arrow
-		input += 1.0
+		input += 0.5
 
 	if input != 0.0:
 		rotation += deg_to_rad(ROTATION_SPEED) * input * delta
@@ -54,7 +53,6 @@ func handle_movement(delta):
 	move_and_slide()
 
 func shoot():
-	print("Shoot func")
 	if bullet_scene:
 		var bullet = bullet_scene.instantiate()
 		var spawn_point = $BulletSpawnPoint.global_position
