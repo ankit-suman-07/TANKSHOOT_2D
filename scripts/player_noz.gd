@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 200.0
+@export var speed := 1000.0
 @export var rotation_speed := 5.0  # Smooth rotation speed
 #@export var bullet_scene : PackedScene
 var bullet_scene: PackedScene = preload("res://scenes/bullet.tscn")

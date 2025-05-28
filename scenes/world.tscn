@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://012vq7or7x8k"]
+[gd_scene load_steps=4 format=3 uid="uid://012vq7or7x8k"]
 
 [ext_resource type="PackedScene" uid="uid://cbxwvvvjpb3ex" path="res://scenes/player_noz.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://bjm8ywy04wb55" path="res://scenes/obstacle.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://1xhs36ea82v6" path="res://scenes/boundary.tscn" id="3_4wyf3"]
 
-[node name="world" type="Node2D"]
+[node name="map" type="Node2D"]
 
 [node name="player_noz" parent="." instance=ExtResource("1_nnsk1")]
 position = Vector2(576, 288)
@@ -34,3 +35,63 @@ position = Vector2(672, -120)
 
 [node name="obstacle9" parent="." instance=ExtResource("2_rwgxs")]
 position = Vector2(504, -392)
+
+[node name="obstacle10" parent="." instance=ExtResource("2_rwgxs")]
+
+[node name="boundaries" type="Node" parent="."]
+
+[node name="boundary" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(-2368, -1872)
+rotation = -0.426328
+
+[node name="boundary2" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(-712, -2440)
+rotation = -0.134086
+
+[node name="boundary3" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(1296, -2640)
+rotation = -0.0476515
+
+[node name="boundary4" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(2968, -2496)
+rotation = 0.387788
+
+[node name="boundary5" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(4184, -1544)
+rotation = 0.941645
+
+[node name="boundary6" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(4520, -312)
+rotation = 1.64262
+
+[node name="boundary7" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(4104, 1400)
+rotation = 2.02378
+
+[node name="boundary8" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(3184, 2480)
+rotation = 2.61571
+
+[node name="boundary9" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(1504, 3160)
+rotation = 2.91816
+
+[node name="boundary10" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(-160, 3336)
+rotation = 3.17587
+
+[node name="boundary11" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(-1568, 2968)
+rotation = 3.88304
+
+[node name="boundary12" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(-2856, 1616)
+rotation = 4.06172
+
+[node name="boundary13" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(-3632, 288)
+rotation = 4.4759
+
+[node name="boundary14" parent="boundaries" instance=ExtResource("3_4wyf3")]
+position = Vector2(-3600, -944)
+rotation = 5.29775

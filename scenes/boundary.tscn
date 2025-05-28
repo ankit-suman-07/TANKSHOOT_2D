@@ -1,15 +1,20 @@
-[gd_scene format=3 uid="uid://1xhs36ea82v6"]
+[gd_scene load_steps=2 format=3 uid="uid://1xhs36ea82v6"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qfxeu"]
+normal = Vector2(0.0274207, 0.999624)
+distance = -639.998
 
 [node name="boundary" type="StaticBody2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -1992.0
-offset_top = -1280.0
-offset_right = 2008.0
-offset_bottom = 1220.0
-metadata/_edit_use_anchors_ = true
+offset_left = -1128.0
+offset_top = -1272.0
+offset_right = 1176.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(48.0001, -87.9999)
-scale = Vector2(1.12853, 1.10716)
-polygon = PackedVector2Array(-4616, -184, -4256, -2320, -2760, -3952, -968, -4936, 2520, -4792, 4488, -4488, 5776, -3168, 7160, -1256, 7408, 688, 7384, 2368, 4624, 3520, 1792, 4736, 640, 4424, -800, 4424, -2624, 3576, -4448, 2792, -4424, 1360)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_as_relative = false
+position = Vector2(9.53674e-07, 648)
+rotation = 0.0274242
+scale = Vector2(1, 1)
+shape = SubResource("WorldBoundaryShape2D_qfxeu")
+debug_color = Color(0.879235, 0.000376575, 0.825198, 0.42)
