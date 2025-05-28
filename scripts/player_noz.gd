@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-@export var speed := 1000.0
-@export var rotation_speed := 5.0  # Unused now, optional to remove
+@export var speed := 400.0
 var bullet_scene: PackedScene = preload("res://scenes/bullet.tscn")
 
-const ROTATION_SPEED := 150.0  # degrees per second
+const ROTATION_SPEED := 150.0
 const MIN_ROTATION := deg_to_rad(-60.0)
 const MAX_ROTATION := deg_to_rad(60.0)
 
@@ -32,7 +31,6 @@ func handle_rotation(delta):
 
 	if input != 0.0:
 		rotation += deg_to_rad(ROTATION_SPEED) * input * delta
-		#rotation = clamp(rotation, MIN_ROTATION, MAX_ROTATION)
 
 func handle_movement(delta):
 	var input_vector = Vector2.ZERO
