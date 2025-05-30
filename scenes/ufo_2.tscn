@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://n3ry2kfx4jcn"]
+
+[ext_resource type="Texture2D" uid="uid://f1ox2gm4y6dr" path="res://assets/ufo.png" id="1_wabvh"]
+
+[node name="ufo_2" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_wabvh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

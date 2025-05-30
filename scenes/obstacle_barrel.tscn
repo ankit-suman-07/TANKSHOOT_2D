@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxx318lfqvlm5"]
+
+[ext_resource type="Texture2D" uid="uid://dkkv4qxdqtug4" path="res://assets/drum.png" id="1_ej0et"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o16im"]
+size = Vector2(38, 64)
+
+[node name="obstacle_barrel" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, 4)
+scale = Vector2(0.125, 0.140625)
+texture = ExtResource("1_ej0et")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_o16im")

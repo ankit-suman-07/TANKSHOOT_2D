@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://012vq7or7x8k"]
+[gd_scene load_steps=10 format=3 uid="uid://012vq7or7x8k"]
 
 [ext_resource type="PackedScene" uid="uid://cbxwvvvjpb3ex" path="res://scenes/player_noz.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://bjm8ywy04wb55" path="res://scenes/obstacle.tscn" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://1xhs36ea82v6" path="res://scenes/boundary.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://5goixad8boed" path="res://scenes/ufo_1.tscn" id="4_4mrxx"]
+[ext_resource type="PackedScene" uid="uid://dxx318lfqvlm5" path="res://scenes/obstacle_barrel.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://n3ry2kfx4jcn" path="res://scenes/ufo_2.tscn" id="5_7r4gi"]
+[ext_resource type="PackedScene" uid="uid://bjbfsn7x24ula" path="res://scenes/castle_tower.tscn" id="7_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://bhya4o34yieij" path="res://scenes/defense_castle.tscn" id="8_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://dhp4bq62td4mg" path="res://scenes/obstacle_rock.tscn" id="9_7r4gi"]
 
 [node name="map" type="Node2D"]
 
@@ -11,32 +17,6 @@ position = Vector2(576, 288)
 
 [node name="obstacle" parent="." instance=ExtResource("2_rwgxs")]
 position = Vector2(296, 184)
-
-[node name="obstacle2" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(760, 72)
-
-[node name="obstacle3" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(968, 408)
-
-[node name="obstacle4" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(456, 560)
-
-[node name="obstacle5" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(408, 816)
-
-[node name="obstacle6" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(848, 744)
-
-[node name="obstacle7" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(224, -216)
-
-[node name="obstacle8" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(672, -120)
-
-[node name="obstacle9" parent="." instance=ExtResource("2_rwgxs")]
-position = Vector2(504, -392)
-
-[node name="obstacle10" parent="." instance=ExtResource("2_rwgxs")]
 
 [node name="boundaries" type="Node" parent="."]
 
@@ -95,3 +75,189 @@ rotation = 4.4759
 [node name="boundary14" parent="boundaries" instance=ExtResource("3_4wyf3")]
 position = Vector2(-3600, -944)
 rotation = 5.29775
+
+[node name="ufos" type="Node" parent="."]
+
+[node name="ufo_1" parent="ufos" instance=ExtResource("4_4mrxx")]
+position = Vector2(-1344, -1992)
+
+[node name="ufo_12" parent="ufos" instance=ExtResource("4_4mrxx")]
+position = Vector2(-1880, -792)
+
+[node name="ufo_13" parent="ufos" instance=ExtResource("4_4mrxx")]
+position = Vector2(1376, 1912)
+
+[node name="ufo_3" parent="ufos" instance=ExtResource("4_4mrxx")]
+position = Vector2(-3296, -632)
+
+[node name="ufo_4" parent="ufos" instance=ExtResource("4_4mrxx")]
+position = Vector2(656, -1984)
+
+[node name="ufo_5" parent="ufos" instance=ExtResource("4_4mrxx")]
+position = Vector2(2824, -312)
+
+[node name="ufo_6" parent="ufos" instance=ExtResource("4_4mrxx")]
+position = Vector2(-232, 2488)
+
+[node name="ufo_2" parent="ufos" instance=ExtResource("5_7r4gi")]
+position = Vector2(-224, 448)
+
+[node name="ufo_7" parent="ufos" instance=ExtResource("5_7r4gi")]
+position = Vector2(2752, 1784)
+
+[node name="ufo_8" parent="ufos" instance=ExtResource("5_7r4gi")]
+position = Vector2(-1304, 2208)
+
+[node name="ufo_9" parent="ufos" instance=ExtResource("5_7r4gi")]
+position = Vector2(-2384, 888)
+
+[node name="ufo_10" parent="ufos" instance=ExtResource("5_7r4gi")]
+position = Vector2(-912, 200)
+
+[node name="ufo_11" parent="ufos" instance=ExtResource("5_7r4gi")]
+position = Vector2(4016, 712)
+
+[node name="barrel" type="Node" parent="."]
+
+[node name="obstacle_barrel" parent="barrel" instance=ExtResource("4_k0juu")]
+position = Vector2(464, 112)
+
+[node name="obstacle_barrel2" parent="barrel" instance=ExtResource("4_k0juu")]
+position = Vector2(1216, -552)
+
+[node name="obstacle_barrel3" parent="barrel" instance=ExtResource("4_k0juu")]
+position = Vector2(-584, -744)
+
+[node name="obstacle_barrel4" parent="barrel" instance=ExtResource("4_k0juu")]
+position = Vector2(-1152, 904)
+
+[node name="obstacle_barrel5" parent="barrel" instance=ExtResource("4_k0juu")]
+position = Vector2(1664, 768)
+
+[node name="obstacle_barrel6" parent="barrel" instance=ExtResource("4_k0juu")]
+position = Vector2(3184, -1736)
+
+[node name="obstacle_barrel7" parent="barrel" instance=ExtResource("4_k0juu")]
+position = Vector2(2280, 2744)
+
+[node name="tower" type="Node" parent="."]
+
+[node name="castle-tower" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(2616, -1248)
+
+[node name="castle-tower2" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(1584, -1880)
+
+[node name="castle-tower3" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(-352, -1840)
+
+[node name="castle-tower4" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(-2528, -200)
+
+[node name="castle-tower5" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(-1656, 504)
+
+[node name="castle-tower6" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(-1872, 1736)
+
+[node name="castle-tower7" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(-768, 1672)
+
+[node name="castle-tower8" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(736, 2672)
+
+[node name="castle-tower9" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(416, 952)
+
+[node name="castle-tower10" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(2464, 1080)
+
+[node name="castle-tower11" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(2024, -720)
+
+[node name="castle-tower12" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(208, -1408)
+
+[node name="castle-tower13" parent="tower" instance=ExtResource("7_w7kh3")]
+position = Vector2(-1792, -1664)
+
+[node name="castle" type="Node" parent="."]
+
+[node name="defense_castle" parent="castle" instance=ExtResource("8_e3hyu")]
+
+[node name="defense_castle2" parent="castle" instance=ExtResource("8_e3hyu")]
+position = Vector2(2504, -2528)
+
+[node name="defense_castle3" parent="castle" instance=ExtResource("8_e3hyu")]
+position = Vector2(-3168, -1344)
+
+[node name="defense_castle4" parent="castle" instance=ExtResource("8_e3hyu")]
+position = Vector2(-1920, 2368)
+
+[node name="defense_castle5" parent="castle" instance=ExtResource("8_e3hyu")]
+position = Vector2(3456, 2112)
+
+[node name="defense_castle6" parent="castle" instance=ExtResource("8_e3hyu")]
+position = Vector2(3152, 360)
+
+[node name="rocks" type="Node" parent="."]
+
+[node name="obstacle_rock" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(976, 168)
+
+[node name="obstacle_rock2" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(1240, 592)
+
+[node name="obstacle_rock3" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(-40, 608)
+
+[node name="obstacle_rock4" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(1960, -96)
+
+[node name="obstacle_rock5" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(1352, -1344)
+
+[node name="obstacle_rock6" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(2440, -1760)
+
+[node name="obstacle_rock7" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(3552, -1016)
+
+[node name="obstacle_rock8" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(2720, -704)
+
+[node name="obstacle_rock9" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(3984, -184)
+
+[node name="obstacle_rock10" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(3592, 1360)
+
+[node name="obstacle_rock11" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(1904, 2104)
+
+[node name="obstacle_rock12" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(488, 2152)
+
+[node name="obstacle_rock13" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(376, 3064)
+
+[node name="obstacle_rock14" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(-608, 976)
+
+[node name="obstacle_rock15" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(-2688, 1304)
+
+[node name="obstacle_rock16" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(-3160, 248)
+
+[node name="obstacle_rock17" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(-2696, -992)
+
+[node name="obstacle_rock18" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(-1024, -1312)
+
+[node name="obstacle_rock19" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(-1136, 448)
+
+[node name="obstacle_rock20" parent="rocks" instance=ExtResource("9_7r4gi")]
+position = Vector2(-1136, 448)

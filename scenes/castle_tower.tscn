@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjbfsn7x24ula"]
+
+[ext_resource type="Texture2D" uid="uid://b70r513n1cqvc" path="res://assets/castle-tower.png" id="1_pxsh3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ores4"]
+size = Vector2(46, 116)
+
+[node name="castle-tower" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, 4.29153e-06)
+scale = Vector2(0.21875, 0.25)
+texture = ExtResource("1_pxsh3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_ores4")

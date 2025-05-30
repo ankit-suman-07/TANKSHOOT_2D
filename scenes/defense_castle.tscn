@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhya4o34yieij"]
+
+[ext_resource type="Texture2D" uid="uid://5fta7jwtmr03" path="res://assets/castle.png" id="1_obgus"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrtd2"]
+size = Vector2(102, 81)
+
+[node name="defense_castle" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_obgus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_lrtd2")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhp4bq62td4mg"]
+
+[ext_resource type="Texture2D" uid="uid://bbqviasrosvj1" path="res://assets/rocks.png" id="1_7kg3c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhcql"]
+size = Vector2(38, 15)
+
+[node name="obstacle_rock" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("1_7kg3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11.5)
+shape = SubResource("RectangleShape2D_uhcql")
